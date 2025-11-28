@@ -14,7 +14,7 @@ public class Vehiculo {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "idVehiculo")
+    @Column(name = "id_vehiculo")
     private Long idVehiculo;
 
     @Column(name = "placa", nullable = false , length = 100)
@@ -31,5 +31,9 @@ public class Vehiculo {
 
     @Column(name = "color")
     private String color;
+
+    @OneToOne
+    @JoinColumn(name = "id_conductor", referencedColumnName = "id_conductor", nullable = false)
+    private Conductor conductor;
 
 }
