@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.Optional;
 
 public interface ConductorService {
+
     Conductor registerConductor(Conductor conductor);
 
     List<Conductor> listConductores();
@@ -16,4 +17,6 @@ public interface ConductorService {
     Conductor updateConductor(Long idConductor, Conductor conductor);
 
     void deleteConductor(Long idConductor);
+
+
 }

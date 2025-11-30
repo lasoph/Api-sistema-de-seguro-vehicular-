@@ -1,4 +1,4 @@
-package com.laura.seguros_vehiculares.contoller;
+package com.laura.seguros_vehiculares.controller;
 
 
 import com.laura.seguros_vehiculares.entity.Conductor;

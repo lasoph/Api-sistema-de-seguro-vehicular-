@@ -2,6 +2,7 @@ package com.laura.seguros_vehiculares.service.implementacion;
 
 
 import com.laura.seguros_vehiculares.entity.Seguro;
+import com.laura.seguros_vehiculares.entity.Vehiculo;
 import com.laura.seguros_vehiculares.repository.SeguroRepository;
 import com.laura.seguros_vehiculares.service.SeguroService;
 import lombok.SneakyThrows;
@@ -53,5 +54,10 @@ public class SeguroServiceImpl implements SeguroService {
                 .orElseThrow(()-> new Exception("Seguro con el id"+ idSeguro+"no encontrado"));
 
         seguroRepository.deleteById(idSeguro);
+    }
+
+    @Override
+    public List<Seguro> getSegurosByIdVehiculo(Vehiculo idVehiculo) {
+        return seguroRepository.findByIdVehiculo(idVehiculo);
     }
 }

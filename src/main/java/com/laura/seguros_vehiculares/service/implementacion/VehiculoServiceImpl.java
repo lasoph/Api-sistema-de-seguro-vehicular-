@@ -1,6 +1,7 @@
 package com.laura.seguros_vehiculares.service.implementacion;
 
 
+import com.laura.seguros_vehiculares.entity.Conductor;
 import com.laura.seguros_vehiculares.entity.Vehiculo;
 import com.laura.seguros_vehiculares.repository.VehiculoRepository;
 import com.laura.seguros_vehiculares.service.VehiculoService;
@@ -44,6 +45,7 @@ public class VehiculoServiceImpl implements VehiculoService {
         vehiculoExisting.setModelo(vehiculo.getModelo());
         vehiculoExisting.setAño(vehiculo.getAño());
         vehiculoExisting.setColor(vehiculo.getColor());
+        vehiculoExisting.setIdConductor(vehiculo.getIdConductor());
 
         return vehiculoRepository.save(vehiculoExisting);
     }

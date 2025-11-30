@@ -34,6 +34,6 @@ public class Vehiculo {
 
     @OneToOne
     @JoinColumn(name = "id_conductor", referencedColumnName = "id_conductor", nullable = false)
-    private Conductor conductor;
+    private Conductor idConductor;
 
 }

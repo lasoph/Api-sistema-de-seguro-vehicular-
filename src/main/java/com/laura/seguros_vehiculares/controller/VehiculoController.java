@@ -1,4 +1,4 @@
-package com.laura.seguros_vehiculares.contoller;
+package com.laura.seguros_vehiculares.controller;
 
 
 import com.laura.seguros_vehiculares.entity.Vehiculo;
@@ -37,6 +37,7 @@ public class VehiculoController {
             updateVehiculo.setModelo(vehiculo.getModelo());
             updateVehiculo.setAño(vehiculo.getAño());
             updateVehiculo.setColor(vehiculo.getColor());
+            updateVehiculo.setIdConductor(vehiculo.getIdConductor());
 
             Vehiculo vehiculoDB = vehiculoService.updateVehiculo(idVehiculo, vehiculo);
             return ResponseEntity.ok(vehiculoDB);
