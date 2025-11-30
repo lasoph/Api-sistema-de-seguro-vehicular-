@@ -56,11 +56,6 @@ public class SeguroController {
         }
     }
 
-    //@GetMapping("/state/{productState}")
-    //public ResponseEntity<List<Product>> listProductsByState(@PathVariable ProductState productState) {
-    //    List<Product> products = productService.getProductsByState(productState);
-    //    return ResponseEntity.ok(products);
-    //}
 
     @GetMapping("/search/by/vehiculo/{idVehiculo}")
     public ResponseEntity<List<Seguro>> searchSegurosByIdVehiculo(@PathVariable Vehiculo idVehiculo){
